@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "@apollo/server": "^4.10.4",
+    "@prisma/client": "^5.16.2",
+    "dotenv": "^16.4.5",
+    "prisma": "^5.16.2"
+  },
+  "name": "69-dars",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "scripts": {
+    "start": "node src/index",
+    "dev": "nodemon src/index",
+    "insert": "node insert"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
