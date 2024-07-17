@@ -28,4 +28,22 @@ module.exports = `#graphql
         getCart(id: ID!): Cart!
         getProduct(id: ID!): Product!
     }
+    type Mutation {
+        createUser(details: UserInputs!): User!
+        createCart(details: CartInputs!): Cart!
+        createProduct(details: ProductInputs!): Product!
+    }
+    input UserInputs {
+        fullname: String!
+        username: String!
+        password: String!
+    }
+    input CartInputs {
+        userId: ID!
+    }
+    input ProductInputs {
+        name: String!
+        price: Float!
+        cartId: ID!
+    }
 `

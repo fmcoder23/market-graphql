@@ -97,6 +97,33 @@ const resolvers = {
                 }
             });
         }
+    },
+    Mutation: {
+        createUser: async (_, { details }) => {
+            return await prisma.users.create({
+                data: {
+                    fullname: details.fullname,
+                    username: details.username,
+                    password: details.password,
+                }
+            });
+        },
+        createCart: async (_, { details }) => {
+            return await prisma.carts.create({
+                data: {
+                    user_id: details.userId
+                }
+            });
+        },
+        createProduct: async (_, { details }) => {
+            return await prisma.products.create({
+                data: {
+                    name: details.name,
+                    price: details.price,
+                    cart_id: details.cartId
+                }
+            });
+        }
     }
 }
 
